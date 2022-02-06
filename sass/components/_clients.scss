@@ -1,0 +1,107 @@
+/* = клієнти = */
+
+.clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item {
+    margin-top: 30px;
+
+    @include tel {
+      flex-basis: calc((100% - 30px) / 2);
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include tab {
+      flex-basis: calc((100% - 60px) / 3);
+      margin-top: 30px;
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+
+    @include pc {
+      flex-basis: calc((100% - 150px) / 6);
+      margin-top: 30px;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 226px;
+    height: 92px;
+
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    background-color: #fff;
+    color: $icon-color;
+    transition: color $animation, background-color $animation;
+
+    @include tel {
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+
+      width: 210px;
+      height: 92px;
+    }
+
+    @include tab {
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+
+      width: 226px;
+      height: 92px;
+    }
+
+    @include pc {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      width: 170px;
+      height: 92px;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill $animation;
+  }
+
+  .titles {
+    font-size: 28px;
+    line-height: calc((33 / 28) * 100%);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $titles;
+
+    @include pc {
+      font-size: 36px;
+      line-height: calc((42 / 36) * 100%);
+    }
+  }
+}
+
+.clients__link:hover,
+.clients__link:focus {
+  border-color: $accent;
+  color: $accent;
+}
+
+// .clients__item + .clients__item {
+//   margin-left: 30px;
+// }

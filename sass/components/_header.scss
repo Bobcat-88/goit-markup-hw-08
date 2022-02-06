@@ -1,0 +1,20 @@
+/* = Хедер сайту = */
+.header {
+  border-bottom: 1px solid #ececec;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: $titles;
+
+  &__logo {
+    color: #000;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

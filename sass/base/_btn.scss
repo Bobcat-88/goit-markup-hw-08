@@ -1,0 +1,12 @@
+/* = Кнопки = */
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  align-items: center;
+
+  border-style: none;
+  border-radius: 4px;
+
+  transition: background-color $animation;
+}

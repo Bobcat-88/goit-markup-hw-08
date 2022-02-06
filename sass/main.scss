@@ -1,0 +1,25 @@
+// Базові стилі
+@import './base/normalize';
+@import './utils/colors';
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/nullStyle';
+@import './base/visually-hiden';
+@import './base/container';
+@import './base/btn';
+
+// Компоненти
+@import './components/logo';
+@import './components/header';
+@import './components/site-nav';
+@import './components/contacts';
+@import './components/hero';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/form';
+@import './components/advantage';
+@import './components/projects';
+@import './components/teams';
+@import './components/clients';
+@import './components/adress';
+@import './components/footer';

@@ -1,0 +1,132 @@
+/* = = = Портфоліо = = = */
+
+/* = фільтр = */
+
+.filter {
+  padding: 60px 15px 60px;
+
+  @include pc {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__list {
+    @include small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include tel {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include tab {
+      display: flex;
+      //
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-left: 8px;
+    }
+
+    @include small {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    @include tel {
+      margin-top: 15px;
+
+      &:nth-child(4n) {
+        margin-left: 0;
+      }
+    }
+
+    @include tab {
+      margin-top: 0px;
+      &:nth-child(4n) {
+        margin-left: 8px;
+      }
+    }
+
+    @include pc {
+      margin-top: 0;
+    }
+  }
+}
+
+.filter__panel {
+  display: flex;
+
+  @include small {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  @include tel {
+    justify-content: start;
+    margin-bottom: 40px;
+  }
+
+  @include tab {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include pc {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+/* = кнопки = */
+
+.buttons {
+  min-height: 38px;
+  padding: 6px 22px;
+
+  border-radius: 4px;
+  border: 0px;
+
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: ((26 / 16) * 100%);
+  letter-spacing: 0.03em;
+
+  background-color: $teams-bg;
+  color: var(--title-site-color);
+
+  transition: color $animation, background-color $animation;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $accent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+  }
+}
+
+.list__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $titles;
+}
+
+.category {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: $primary;
+}

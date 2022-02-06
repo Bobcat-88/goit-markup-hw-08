@@ -1,0 +1,41 @@
+/* = Tіло = */
+body {
+  padding: 0;
+  font-family: Roboto, 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  background-color: #ffffff;
+  color: $primary;
+}
+
+/* = Обнулення стилів = */
+p,
+h1,
+h2,
+h3,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}

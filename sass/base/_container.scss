@@ -1,0 +1,29 @@
+/* = Параметри  = */
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include tel {
+    width: 480px;
+    /* Стилі телефона */
+  }
+
+  @include tab {
+    width: 768px;
+    /* Стилі планшета */
+  }
+
+  @include pc {
+    width: 1200px;
+    /* Стилі десктопа */
+  }
+}
+
+.section {
+  padding: 60px 0;
+  @include pc {
+    padding: 94px 0;
+  }
+}
