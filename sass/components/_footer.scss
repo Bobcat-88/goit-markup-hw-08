@@ -1,0 +1,359 @@
+/* = футер = */
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background: $secondary-bg;
+
+  &__container {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include tel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include tab {
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @include pc {
+      float: left;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+  & .logo {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include tab {
+      padding: 0;
+    }
+  }
+
+  &__addres {
+    display: block;
+    padding-left: 0;
+
+    @include tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 176px;
+    }
+
+    @include pc {
+      display: block;
+      margin-right: 0;
+    }
+  }
+}
+
+/* = футер адрес = */
+.addres {
+  &__post {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: #fff;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include pc {
+      align-items: baseline;
+    }
+  }
+
+  &__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color $animation;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+}
+
+/* = футер підписка = */
+.footer__social {
+  display: block;
+  margin-top: 12px;
+  margin-left: 70px;
+  padding: 0;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+
+  @include tel {
+    width: 206px;
+  }
+  @include tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-bottom: auto;
+  }
+
+  @include pc {
+    display: block;
+    width: 206px;
+    margin-left: auto;
+    padding: 0;
+    margin-bottom: auto;
+  }
+}
+
+.footer__title {
+  @include base-title();
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+
+  @include tel {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include pc {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.footer__social__list {
+  margin-top: 20px;
+}
+
+.footer__social__link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+
+  transition: background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+.footer__social__item {
+  & + .footer__social__item {
+    margin-left: 10px;
+  }
+}
+
+.footer__social__icon {
+  fill: currentColor;
+}
+
+.footer__subscrabe {
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  @include tel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+  }
+
+  @include tab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  @include pc {
+    display: block;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-bottom: auto;
+    width: auto;
+  }
+}
+
+/* = футер форма = */
+
+.footer__form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+
+  @media screen and (max-width: 479px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(100% - 30px);
+  }
+  @include tel {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  @include pc {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 0;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+
+    color: #fff;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color $animation;
+
+    font-size: 16px;
+    padding-left: 16px;
+
+    @media screen and (max-width: 479px) {
+      width: calc(100% - 30px);
+    }
+    @include tel {
+      width: 450px;
+    }
+
+    @include tab {
+      width: 450px;
+    }
+
+    @include pc {
+      width: 358px;
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+    align-items: center;
+  }
+
+  & .form__label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 12px;
+
+    @include tab {
+      margin-top: 0;
+    }
+  }
+}
+
+.footer__form__input:hover,
+.footer__form__input:focus {
+  background-color: rgba(117, 117, 117, 0.2);
+  transition: background-color $animation;
+}
+
+.footer__form__button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+
+  @include small {
+    margin-top: 20px;
+  }
+
+  @include tel {
+    margin-top: 20px;
+  }
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  @include pc {
+    margin-top: 0;
+    margin-left: 12px;
+  }
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: $accent;
+  transition: background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    transition: background-color $animation;
+  }
+}
