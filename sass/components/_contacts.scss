@@ -1,0 +1,70 @@
+/* = контакти = */
+.contacts {
+  display: flex;
+  margin-left: auto;
+  padding: 32px 0;
+  justify-content: center;
+  align-items: center;
+
+  @include tab {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 84px;
+    padding: 20px 0;
+
+    &__item:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  @include pc {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 304px;
+    flex-wrap: nowrap;
+    &__item:last-child {
+      margin-top: 0;
+    }
+  }
+
+  & .contacts__item + .contacts__item {
+    @include tab {
+      margin-left: 0;
+    }
+
+    @include pc {
+      margin-left: 50px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @include pc {
+      font-size: 14px;
+      line-height: calc((16 / 14) * 100%);
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+
+  &__link {
+    color: $primary;
+    transition: color $animation;
+  }
+}

@@ -1,0 +1,110 @@
+/* = навігація = */
+.nav-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  & .site-nav__item + .site-nav__item {
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+
+  @include tab {
+    & {
+      justify-content: space-between;
+    }
+  }
+  // @include pc {
+  //   justify-content: space-between;
+  // }
+}
+
+.site-menu {
+  @media screen and (max-width: 767px) {
+    & {
+      display: none;
+    }
+  }
+
+  @include tab {
+    & {
+      display: flex;
+      align-items: center;
+      /* Стилі планшета */
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      display: flex;
+      align-items: center;
+      /* Стилі десктопа */
+    }
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  // margin-left: 93px;
+
+  @include tab {
+    & {
+      display: flex;
+      align-items: center;
+      /* Стилі планшета */
+    }
+  }
+
+  @include pc {
+    & {
+      display: flex;
+      align-items: center;
+      margin-left: 75px;
+      /* Стилі десктопа */
+    }
+  }
+
+  & .site-nav__item + .site-nav__item {
+    margin-left: 50px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    color: $titles;
+    transition: color $animation;
+    padding: 32px 0 32px 0;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+
+  &__link.current {
+    color: $accent;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+  }
+
+  &__link.current::before {
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $accent;
+
+    position: absolute;
+    bottom: 0;
+  }
+}
