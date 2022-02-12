@@ -50,6 +50,7 @@
     @include pc {
       font-size: 14px;
       line-height: calc((16 / 14) * 100%);
+      flex-wrap: nowrap;
     }
   }
 

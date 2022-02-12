@@ -16,5 +16,9 @@
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+
+    @include pc {
+      margin-right: 0;
+    }
   }
 }

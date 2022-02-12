@@ -1,48 +1,3 @@
-// .mob-menu {
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 100%;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 99;
-
-//   transform: translateX(100%);
-//   @include tab {
-//     display: none;
-//   }
-
-//   &__button {
-//     display: inline-block;
-//     margin-left: auto;
-//     padding: 0;
-//     border: none;
-//     background: transparent;
-
-//     @include tab {
-//       display: none;
-//     }
-//   }
-
-//   &.is-open {
-//     transform: translateX(0);
-//   }
-// }
-
-// .mob-menu__button {
-//   & .icon-cross {
-//     display: none;
-//   }
-
-//   & .is-open .icon-cross {
-//     display: block;
-//   }
-
-//   & .is-open .icon-menu {
-//     display: none;
-//   }
-// }
-//
 .mob {
   &-menu {
     position: relative;
@@ -63,6 +18,7 @@
     @include tab {
       display: none;
     }
+
     &.is-hidden {
       transform: translate(100%);
     }
@@ -70,9 +26,17 @@
   // .mob-menu__open
 
   &-menu__open {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin-left: auto;
     display: block;
     background: transparent;
     border: none;
+
+    @include tab {
+      display: none;
+    }
   }
 
   // .mob-menu__close
@@ -106,9 +70,16 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &:hover,
+    &:focus {
+      font-size: calc(40px * 1.1);
+      transition: $animation;
+    }
   }
 
   &__link {
+    position: relative;
     color: $titles;
     transition: $animation;
 
@@ -117,6 +88,10 @@
       color: $accent;
     }
   }
+}
+
+.current-mob {
+  color: $accent;
 }
 
 .mob-contacts {
@@ -133,6 +108,12 @@
     letter-spacing: 0.02em;
     color: $accent;
 
+    &:hover,
+    &:focus {
+      font-size: calc(34px * 1.1);
+      transition: $animation;
+    }
+
     @include small {
       font-size: 26px;
       line-height: calc((30 / 26) * 100%);
@@ -142,6 +123,12 @@
     font-size: 24px;
     line-height: calc((28 / 24) * 100%);
     color: $primary;
+
+    &:hover,
+    &:focus {
+      font-size: calc(24px * 1.1);
+      transition: $animation;
+    }
 
     @include small {
       font-size: 20px;
@@ -163,6 +150,12 @@
     font-size: 18px;
     line-height: calc((22 / 18) * 100%);
     color: $accent;
+
+    &:hover,
+    &:focus {
+      font-size: calc(18px * 1.1);
+      transition: $animation;
+    }
   }
 }
 
