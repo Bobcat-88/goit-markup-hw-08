@@ -1109,9 +1109,18 @@ textarea {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 479px) {
+  .advantage__item:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .advantage__item {
     max-width: 450px;
+  }
+  .advantage__item:nth-last-child(-n + 1) {
+    margin-bottom: 0;
   }
 }
 
@@ -1119,11 +1128,12 @@ textarea {
   .advantage__item {
     margin-right: 30px;
     flex-basis: calc((100% - 30px) / 2);
-    max-width: 354px;
-    height: 251px;
   }
   .advantage__item:nth-child(2n) {
     margin-right: 0;
+  }
+  .advantage__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -1132,6 +1142,7 @@ textarea {
     width: calc(100% / 4 - 30px);
     height: 251px;
     flex-wrap: nowrap;
+    margin-bottom: 0;
   }
   .advantage__item:nth-child() {
     margin-right: 0;
@@ -1252,7 +1263,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .teams__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-left: 0;
   }
@@ -1278,6 +1289,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .teams__item {
+    margin-top: 50px;
     width: calc(100% / 4 - 30px);
     flex-wrap: nowrap;
   }
@@ -1367,7 +1379,7 @@ textarea {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .clients__item {
@@ -1426,9 +1438,6 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .clients__link {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 226px;
     height: 92px;
   }
@@ -1436,9 +1445,6 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .clients__link {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 170px;
     height: 92px;
   }

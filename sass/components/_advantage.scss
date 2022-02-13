@@ -19,8 +19,17 @@
   &__item {
     margin-bottom: 30px;
 
+    @include small {
+      &:nth-last-child(-n + 1) {
+        margin-bottom: 0;
+      }
+    }
+
     @include tel {
       max-width: 450px;
+      &:nth-last-child(-n + 1) {
+        margin-bottom: 0;
+      }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -29,14 +38,16 @@
       &:nth-child(2n) {
         margin-right: 0;
       }
-      max-width: 354px;
-      height: 251px;
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
     }
 
     @include pc {
       width: calc(100% / 4 - 30px);
       height: 251px;
       flex-wrap: nowrap;
+      margin-bottom: 0;
       &:nth-child() {
         margin-right: 0;
       }

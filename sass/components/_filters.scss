@@ -3,7 +3,8 @@
 /* = фільтр = */
 
 .filter {
-  padding: 60px 15px 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @include pc {
     padding-top: 94px;
@@ -26,7 +27,7 @@
 
     @include tab {
       display: flex;
-      //
+
       justify-content: center;
     }
   }
@@ -101,7 +102,7 @@
   letter-spacing: 0.03em;
 
   background-color: $teams-bg;
-  color: var(--title-site-color);
+  color: $titles;
 
   transition: color $animation, background-color $animation;
 

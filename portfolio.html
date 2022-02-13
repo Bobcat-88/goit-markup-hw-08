@@ -21,8 +21,12 @@
     <!--нав-бар-->
     <header class=" header header__portfolio">
         <div class="container nav-bar">
-
-            <a class="logo link" href="./index.html">Web<span class="header__logo">Studio</span></a>
+            <a href="./index.html" class="logo link">
+                <svg class="header__icon logo__anime" width="145" height="28">
+                    <use href="./images/icons.svg#icon-webStudio"></use>
+                </svg>
+            </a>
+            <!-- <a class="logo link" href="./index.html">Web<span class="header__logo">Studio</span></a> -->
             <button type="button" class="mob-menu__open" data-mobMenu-open>
                 <svg width="40" height="40" aria-label="відкрити меню">
                     <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
@@ -37,10 +41,10 @@
                 <div class="mob-nav">
                     <ul class="mob-nav__list list">
                         <li class="mob-nav__item">
-                            <a class="link mob-nav__link" href="./index.html">Студия</a>
+                            <a class="link mob-nav__link current-mob" href="./index.html">Студия</a>
                         </li>
                         <li class="mob-nav__item">
-                            <a class="link mob-nav__link current-mob" href="./portfolio.html">Портфолио</a>
+                            <a class="link mob-nav__link" href="./portfolio.html">Портфолио</a>
                         </li>
                         <li class="mob-nav__item">
                             <a class="link mob-nav__link" href="/">Контакты</a>
@@ -59,13 +63,14 @@
                         </li>
                     </ul>
                     <ul class="mob-social__list">
-                        <li><a class="mob-social__link link" href="">Instagram</a></li>
-                        <li><a class="mob-social__link link line" href="">Twitter</a></li>
-                        <li><a class="mob-social__link link line" href="">Facebook</a></li>
-                        <li><a class="mob-social__link link line" href="">LinkedIn</a></li>
+                        <li class="mob-social__item"><a class="mob-social__link link" href="">Instagram</a></li>
+                        <li class="mob-social__item"><a class="mob-social__link link line" href="">Twitter</a></li>
+                        <li class="mob-social__item"><a class="mob-social__link link line" href="">Facebook</a></li>
+                        <li class="mob-social__item"><a class="mob-social__link link line" href="">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="site-menu">
                 <nav class="site-nav">
                     <ul class="site-nav__list list">

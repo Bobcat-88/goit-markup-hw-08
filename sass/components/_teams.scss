@@ -17,7 +17,7 @@
 
     @include pc {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       padding-left: 0;
     }
@@ -40,6 +40,7 @@
     }
 
     @include pc {
+      margin-top: 50px;
       width: calc(100% / 4 - 30px);
       flex-wrap: nowrap;
       &:nth-child() {
