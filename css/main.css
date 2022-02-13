@@ -674,13 +674,6 @@ textarea {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .logo {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
@@ -708,7 +701,6 @@ textarea {
 
 /* = Хедер сайту = */
 .header {
-  border-bottom: 1px solid #ececec;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -729,6 +721,10 @@ textarea {
   .header__icon {
     margin-right: 0;
   }
+}
+
+.header__portfolio {
+  border-bottom: 1px solid #ececec;
 }
 
 /* = навігація = */
