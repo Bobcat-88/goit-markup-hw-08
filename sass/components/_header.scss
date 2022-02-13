@@ -1,7 +1,5 @@
 /* = Хедер сайту = */
 .header {
-  border-bottom: 1px solid #ececec;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -20,5 +18,8 @@
     @include pc {
       margin-right: 0;
     }
+  }
+  &__portfolio {
+    border-bottom: 1px solid #ececec;
   }
 }

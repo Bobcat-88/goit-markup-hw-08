@@ -14,11 +14,6 @@
     padding-bottom: 16px;
   }
 
-  @include tab {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-
   @include pc {
     font-size: 26px;
     line-height: calc((31 / 26) * 100%);
