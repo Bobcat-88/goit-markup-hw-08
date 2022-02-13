@@ -70,12 +70,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-
-    &:hover,
-    &:focus {
-      font-size: calc(40px * 1.1);
-      transition: $animation;
-    }
   }
 
   &__link {
@@ -108,12 +102,6 @@
     letter-spacing: 0.02em;
     color: $accent;
 
-    &:hover,
-    &:focus {
-      font-size: calc(34px * 1.1);
-      transition: $animation;
-    }
-
     @include small {
       font-size: 26px;
       line-height: calc((30 / 26) * 100%);
@@ -123,12 +111,6 @@
     font-size: 24px;
     line-height: calc((28 / 24) * 100%);
     color: $primary;
-
-    &:hover,
-    &:focus {
-      font-size: calc(24px * 1.1);
-      transition: $animation;
-    }
 
     @include small {
       font-size: 20px;
@@ -150,12 +132,6 @@
     font-size: 18px;
     line-height: calc((22 / 18) * 100%);
     color: $accent;
-
-    &:hover,
-    &:focus {
-      font-size: calc(18px * 1.1);
-      transition: $animation;
-    }
   }
 }
 
