@@ -5,6 +5,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include small {
+      justify-content: center;
+    }
   }
   &__item {
     margin-top: 30px;
