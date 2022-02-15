@@ -1,107 +1,63 @@
 /* = картки = */
-.cards {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .cards__list {
   display: flex;
-
-  @include small {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @include tel {
-    display: flex;
-    flex-direction: column;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include tab {
-    display: flex;
-    flex-direction: row;
+    flex-direction: inherit;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @include pc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: -15px;
-    margin-bottom: -15px;
+    justify-content: flex-start;
   }
 }
 
 .cards__item {
-  margin-right: 30px;
   margin-bottom: 30px;
-  overflow: hidden;
-
-  @include small {
-    margin-right: 0;
+  transition: $animation;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .description,
+  &:focus .description {
+    transform: translateY(0);
   }
 
-  @include tel {
-    margin-right: 0;
-
+  @include small {
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  @include tab {
-    margin: 15px;
-    overflow: hidden;
-    width: 354px;
-    height: 440px;
+  @include tel {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: space-around;
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include pc {
-    margin: 15px;
-    overflow: hidden;
-    width: 370px;
-    height: 404px;
-  }
-}
-
-.cards__item {
-  &:hover .description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    @include small {
-      padding: 15px 15px;
+    justify-content: space-around;
+    margin-right: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
     }
-
-    @include tel {
-      padding: 77px 24px;
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
     }
-    @include tab {
-      padding: 49px 24px;
-    }
-    @include tab {
-      padding: 63px 24px;
-    }
-    background-color: $cards-bg;
-    color: #fff;
-
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.55;
-
-    transform: translateY(0);
-    transition: transform $animation, opacity $animation;
-  }
-
-  &:focus,
-  &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 
@@ -111,54 +67,28 @@
 }
 
 .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 63px 24px;
   position: absolute;
   top: 0;
-  left: 0;
+  width: 100%;
   height: 100%;
-
-  background-color: $cards-bg;
-  color: #fff;
-
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.55;
-  opacity: 0.9;
-
+  line-height: 1.56;
+  background-color: #2196f3e5;
+  color: #fff;
   transform: translateY(100%);
   transition: transform $animation, opacity $animation;
-  @include small {
-    padding: 15px 15px;
-  }
-
-  @include tel {
-    padding: 77px 24px;
-  }
-
-  @include tab {
-    font-size: 18px;
-    line-height: ((36 / 18) * 100%);
-    padding: 49px 24px;
-  }
-
-  @include pc {
-    padding: 63px 24px;
-  }
 }
 
 .cards__text {
-  padding: 20px 24px;
-  box-sizing: border-box;
-  border: 1px solid #eeeeee;
-
   background: #fff;
-
-  @include tab {
-    height: 146px;
-    padding: 20px 24px;
-  }
-
-  @include pc {
-    height: 110px;
-    padding: 20px 24px;
-  }
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24.02px;
 }
